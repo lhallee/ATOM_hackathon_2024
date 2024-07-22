@@ -6,7 +6,10 @@ from rdkit.Chem import AllChem
 import argparse
 
 # Load the data
-data = pd.read_csv('4_AMPL_jtvae_data_all_generations.csv')
+#data = pd.read_csv('lesstox_min_data_all_generations.csv')
+#data = pd.read_csv('moretox_min_data_all_generations.csv')
+data = pd.read_csv('moretox_max_data_all_generations.csv')
+
 
 def get_parents(row):
     if isinstance(row['Generation, method this molecule was created, and parent ID numbers'], str) and 'crossover' in row['Generation, method this molecule was created, and parent ID numbers']:
